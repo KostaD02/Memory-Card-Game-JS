@@ -1,0 +1,119 @@
+body {
+  margin:0px;
+  padding:0px;
+  background-image: url("https://raw.githubusercontent.com/FoxyStoat/memory-game/master/assets/img/ignasi_pattern_s.png");
+  font-family: 'Montserrat', sans-serif;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 10px;
+  place-items: center;
+}
+
+main .controls {
+  width: 60%;
+  max-width: 600px;
+  background-color: white;
+  padding: 25px;
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 15px;
+}
+
+main .controls .top {
+  text-align: center;
+}
+
+main .controls .bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+}
+
+main .controls .bottom .left {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  column-gap: 15px;
+}
+
+main .generate {
+  display: grid;
+  gap: 12px;
+  background-color: rgb(12, 43, 68);
+  border-radius: 8px;
+  padding: 25px;
+  box-sizing: border-box;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+main .card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: 0.3s;
+  border-radius: 3px;
+  opacity: 0;
+}
+
+main .generate .box,
+main .card-image {
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+main .generate .box {
+  width: 100px;
+  height: 150px;
+  padding: 8px;
+  background-color: #8fafca;
+  border-radius: 10px;
+}
+
+
+.rotate {
+  background-color: #5a7e9b;
+  animation-name: rotate;
+  animation-duration: 0.2s;
+  animation-timing-function: linear;
+  cursor: not-allowed !important;
+}
+
+.rotate img {
+  opacity: 1;
+}
+
+.back-rotate {
+  animation-name: rotate-back;
+  animation-duration: 0.2s;
+  animation-timing-function: linear;
+  cursor: pointer;
+}
+
+@keyframes rotate {
+  0%{ transform: rotateX(0deg) rotateY(-180deg); }
+  100% { transform:rotateX(0deg) rotateY(0deg); }
+}
+
+@keyframes rotate-back {
+  0%{ transform: rotateX(0deg) rotateY(0deg); }
+  100% { transform:rotateX(0deg) rotateY(-180deg); }
+}
+
+main .wrapper {
+  display: none;
+  text-align: center;
+}
