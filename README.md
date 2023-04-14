@@ -17,5 +17,3 @@ The objective of the game is to match all pairs of cards as quickly as possible.
 1. Only two cards may be flipped over at a time.
 2. The player must remember the location of each card to match pairs.
 3. The game can be played multiple times to beat your best score.
-
-Live: https://kostad02.github.io/Memory-Card-Game-JS
